@@ -8,9 +8,11 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="93dp"
-        android:layout_height="18dp"
-        android:text="Hello Android"
+        android:layout_width="127dp"
+        android:layout_height="27dp"
+        android:text="Hello LƯƠNG"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
