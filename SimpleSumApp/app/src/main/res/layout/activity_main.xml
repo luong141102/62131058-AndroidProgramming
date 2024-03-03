@@ -6,18 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:onClick="Reset"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.735" />
+
     <EditText
         android:id="@+id/edtKQ"
-        android:layout_width="201dp"
-        android:layout_height="61dp"
+        android:layout_width="251dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="30dp"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514" />
+
+    <EditText
+        android:id="@+id/edtB"
+        android:layout_width="251dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="number"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintHorizontal_bias="0.843"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.226" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,19 +60,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.115" />
 
-    <EditText
-        android:id="@+id/edtA"
-        android:layout_width="207dp"
-        android:layout_height="64dp"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,24 +72,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.243" />
 
-    <EditText
-        android:id="@+id/edtB"
-        android:layout_width="205dp"
-        android:layout_height="72dp"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.655"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.224"
-        tools:ignore="MissingConstraints" />
-
     <Button
         android:id="@+id/btnCong"
-        android:layout_width="106dp"
-        android:layout_height="54dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:text="Tính Tổng"
+        android:onClick="XuLyCong"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,5 +96,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.523" />
+
+    <EditText
+        android:id="@+id/edtA"
+        android:layout_width="251dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
