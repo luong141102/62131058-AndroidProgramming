@@ -128,17 +128,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.379" />
 
-    <EditText
-        android:id="@+id/edtKQ"
-        android:layout_width="187dp"
-        android:layout_height="65dp"
-        android:ems="10"
-        android:inputType="number"
+    <TextView
+        android:id="@+id/tvKetQua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
+        app:layout_constraintVertical_bias="0.668" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
