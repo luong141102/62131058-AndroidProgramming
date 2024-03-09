@@ -20,13 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         timDK();
-        ArrayList<String> dsBH;
         dsBH = new ArrayList<String>();
-        dsBH.add("Nha Trang thu");
-        dsBH.add("Gan lam Truong Sa");
-        dsBH.add("Ha Noi dem tro gio");
+        dsBH.add("Chân Tình");
+        dsBH.add("Chúng Ta Của Tương Lai");
+        dsBH.add("Vết Mưa");
+        dsBH.add("Khóa Ly Biệt");
 
-        ArrayAdapter<String> adapterBH;
         adapterBH = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,
@@ -36,17 +35,12 @@ public class MainActivity extends AppCompatActivity {
         lvbaiHat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String chuoiThongBao = "Ban chon bai "+ dsBH.get(position);
+                String chuoiThongBao = "Bạn chọn bài "+ dsBH.get(position);
                 Toast.makeText(MainActivity.this, chuoiThongBao, Toast.LENGTH_SHORT).show();
-                //HamXuLyChonItem(position);
             }
         });
     }
-    void HamXuLyChonItem(int vitri, View v, int position){
-        String chuoiThongBao = "Ban chon bai "+ dsBH.get(position);
-        Toast.makeText(MainActivity.this, chuoiThongBao, Toast.LENGTH_SHORT).show();
-    }
     void timDK(){
-        ListView lvBaiHat = findViewById(R.id.dsBH);
+        lvbaiHat = findViewById(R.id.listView);
     }
 }
