@@ -36,7 +36,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="130dp"
             android:onClick="ThemPhanTu"
-            android:text="Search"
+            android:text="ADD"
             android:textSize="30dp" />
     </LinearLayout>
 

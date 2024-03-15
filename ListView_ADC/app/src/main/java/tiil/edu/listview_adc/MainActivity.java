@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void ThemPhanTu(){
+    public void ThemPhanTu(View view){
         EditText edtNhapTen = findViewById(R.id.edtNhapTen);
         String tenNhap = edtNhapTen.getText().toString();
         dsTen.add(tenNhap);
