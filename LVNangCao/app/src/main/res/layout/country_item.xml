@@ -20,12 +20,13 @@
 
     <TextView
         android:id="@+id/tvTenQG"
-        android:layout_width="314dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="303dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="40dp"
         android:background="#6FC3EA"
         android:text="TextView"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.285"
@@ -35,11 +36,14 @@
 
     <TextView
         android:id="@+id/tvSoLuongDan"
-        android:layout_width="315dp"
+        android:layout_width="300dp"
         android:layout_height="25dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="5dp"
+        android:layout_marginEnd="6dp"
         android:background="#EFCF7E"
         android:text="TextView"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.285"

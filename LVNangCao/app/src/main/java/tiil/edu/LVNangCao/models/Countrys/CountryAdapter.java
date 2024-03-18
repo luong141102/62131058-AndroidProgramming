@@ -18,26 +18,23 @@ public class CountryAdapter extends BaseAdapter {
     Context mContext;
     LayoutInflater mInflater;
 
-    public CountryAdapter(ArrayList<Country> listQG, Context mContext, LayoutInflater mInflater) {
+    public CountryAdapter(Context mContext, ArrayList<Country> listQG) {
         this.listQG = listQG;
         this.mContext = mContext;
-        this.mInflater = mInflater;
+        mInflater = LayoutInflater.from(mContext);
     }
     @Override
     public int getCount() {
         return listQG.size();
     }
-
     @Override
     public Object getItem(int position) {
         return listQG.get(position);
     }
-
     @Override
     public long getItemId(int position) {
         return 0;
     }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         CountryViewHolder viewItem;
@@ -56,7 +53,7 @@ public class CountryAdapter extends BaseAdapter {
         int soDan = quocGiaHienThi.getSoluongDan();
         String tenLaCo = quocGiaHienThi.getTenFileAnhLaCo();
         viewItem.textViewNationName.setText(tenQG);
-        viewItem.textViewPopulation.setText(soDan);
+        viewItem.textViewPopulation.setText("Dân số: "+ String.valueOf(soDan));
         int idAnhLaCo = TimIDAnhTheoTenFile(tenLaCo);
 
         viewItem.imageViewFlag.setImageResource(idAnhLaCo);
