@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_bgr"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="422dp"
+        android:layout_height="66dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="BMI APP"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:background="#67C1EA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="CÂN NẶNG"
+        android:textColor="#FDFEFF"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-black"
+        android:text="CHIỀU CAO"
+        android:textColor="#FDFEFF"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCN"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtCC"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text=""
+        android:hint="0.0"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+
+    <Button
+        android:id="@+id/btnKQ"
+        android:layout_width="124dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/press_btn"
+        android:text="RESULT"
+        android:textSize="20dp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCC" />
+
+    <EditText
+        android:id="@+id/edtCN"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="0"
+        android:inputType="number"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tvKQ"
+        android:layout_width="363dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnKQ" />
+
+    <Button
+        android:id="@+id/btnRS"
+        android:layout_width="124dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="52dp"
+        android:text="RESET"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:background="@drawable/press2_btn"
+        app:backgroundTint= "@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKQ" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
