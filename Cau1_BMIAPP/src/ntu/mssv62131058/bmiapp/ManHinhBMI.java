@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class ManHinhBMI extends JFrame {
 
@@ -70,6 +71,7 @@ public class ManHinhBMI extends JFrame {
 		BMI.add(btnKQ);
 		
 		txtKQ = new JTextField();
+		txtKQ.setHorizontalAlignment(SwingConstants.CENTER);
 		txtKQ.setEditable(false);
 		txtKQ.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtKQ.setBounds(48, 259, 245, 42);
