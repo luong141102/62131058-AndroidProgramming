@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "15343639046",
+    "project_id": "login-firebase-4beef",
+    "storage_bucket": "login-firebase-4beef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15343639046:android:55d0e18e7aab1f8aedc187",
+        "android_client_info": {
+          "package_name": "ntu.mssv_62131058.luong_signup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRxOCmhw-3OO71NadJoXkHlMecL6pjHL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
