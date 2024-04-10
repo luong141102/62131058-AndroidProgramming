@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getControls();
         dsTen = new ArrayList<String>();
-        dsTen.add("Ánh Tuyết");
+        dsTen.add("Dieu Huyen");
         dsTen.add("Kungfu Panda");
         dsTen.add("Alipapa");
         dsTen.add("Jack Sparow");
