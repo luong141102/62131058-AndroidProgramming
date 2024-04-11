@@ -18,18 +18,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerViewDatas = getDataForRecyclerView();
         recyclerViewLandScape = findViewById(R.id.recyclerLand);
-        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this);
+//        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this);
+//        recyclerViewLandScape.setLayoutManager(layoutLinear);
+        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         recyclerViewLandScape.setLayoutManager(layoutLinear);
         landScapeAdapter = new LandScapeAdapter(this, recyclerViewDatas);
         recyclerViewLandScape.setAdapter(landScapeAdapter);
     }
     ArrayList<LandScape> getDataForRecyclerView(){
         ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
-        LandScape landScape1 = new LandScape("tan", "Cô bé bán diêm");
+        LandScape landScape1 = new LandScape("tan", "Tanjiro");
         dsDuLieu.add(landScape1);
-        dsDuLieu.add(new LandScape("zen", "220V"));
-        dsDuLieu.add(new LandScape("ino", "Cậu bé rừng xanh"));
-        dsDuLieu.add(new LandScape("mui", "Săn mây Sapa"));
+        dsDuLieu.add(new LandScape("zen", "Zenitsu"));
+        dsDuLieu.add(new LandScape("ino", "Inosuke"));
+        dsDuLieu.add(new LandScape("mui", "Muichiro"));
         return dsDuLieu;
     }
 }
