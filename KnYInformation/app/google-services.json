@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "557514209478",
+    "project_id": "anime-account",
+    "storage_bucket": "anime-account.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557514209478:android:812b4aad2024f2841cffc7",
+        "android_client_info": {
+          "package_name": "ntu.mssv_62131058.animeaccount"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH77th3w1WTeY12DiiYzs5uInHmRPnNhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

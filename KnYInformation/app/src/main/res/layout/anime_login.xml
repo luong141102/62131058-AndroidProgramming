@@ -4,30 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#59BDEA"
-    tools:context=".Register">
+    android:background="@drawable/bg_anime"
+    tools:context=".Login">
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/bg_top"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvRS"
+        android:id="@+id/tvSI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
-        android:text="Register"
-        android:textSize="80dp"
+        android:fontFamily="@font/frijole"
+        android:text="Sign In"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="@+id/frameLayout"
-        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/frameLayout"
         app:layout_constraintTop_toTopOf="@+id/frameLayout" />
 
@@ -39,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo_login" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -83,7 +82,6 @@
             android:hint="Enter password"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
-
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
@@ -95,16 +93,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
-
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_login"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:text="REGISTER"
+        android:text="LOG IN"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:background="@drawable/btn_bg"
+        android:background="@drawable/btn_login"
         android:layout_marginTop="32dp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,15 +109,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <TextView
-        android:id="@+id/tvlogin"
+        android:id="@+id/tvregister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Back to login"
+        android:text="Register now"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 </androidx.constraintlayout.widget.ConstraintLayout>
