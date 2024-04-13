@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CustomNavigation</string>
+    <string name="nav_home">HOME</string>
+    <string name="nav_prof">PROFILE</string>
+    <string name="nav_logout">LOG OUT</string>
+    <string name="nav_open">Open navigation</string>
+    <string name="nav_close">Close navigation</string>
+</resources>
