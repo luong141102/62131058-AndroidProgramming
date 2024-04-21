@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -21,6 +22,7 @@ import ntu.mssv_62131058.customnavigation.page.LogoutPage;
 import ntu.mssv_62131058.customnavigation.page.ProfilePage;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
     DrawerLayout mDrawerLayout;
     int HOMEPAGE = 0;
     int PROFILEPAGE = 1;
@@ -60,15 +62,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         } else if (id == R.id.nav_logout) {
             if (mCurrent != LOGOUT){
-                replaceFragment(new PageMain());
+                setContentView(R.layout.logout_page);
                 mCurrent = LOGOUT;
             }
         }
         mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    private void replaceFragment(PageMain pageMain) {
     }
 
     @Override
