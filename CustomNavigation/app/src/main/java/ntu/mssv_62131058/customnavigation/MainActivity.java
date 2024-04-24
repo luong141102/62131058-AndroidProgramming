@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         } else if (id == R.id.nav_logout) {
             if (mCurrent != LOGOUT){
-                setContentView(R.layout.logout_page);
+                replaceFragment(new LogoutPage());
                 mCurrent = LOGOUT;
             }
         }
