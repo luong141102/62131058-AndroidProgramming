@@ -1,4 +1,4 @@
-package ntu.mssv_62131058.customnavigation.page;
+package ntu.mssv_62131058.customnavigation;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,5 +22,4 @@ public class HomePage extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.home_page, container, false);
     }
-
 }

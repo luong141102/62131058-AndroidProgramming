@@ -1,4 +1,4 @@
-package ntu.mssv_62131058.customnavigation.page;
+package ntu.mssv_62131058.bottomnavi_recyclerview;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,8 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-
-import ntu.mssv_62131058.customnavigation.R;
 
 public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.ItemLandHolder> {
     public LandScapeAdapter(Context context, ArrayList<LandScape> lstData) {

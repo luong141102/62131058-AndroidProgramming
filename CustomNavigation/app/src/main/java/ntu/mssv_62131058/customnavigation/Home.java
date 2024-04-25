@@ -1,21 +1,22 @@
-package ntu.mssv_62131058.usingrecyclerview;
+package ntu.mssv_62131058.customnavigation;
 
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class Home extends AppCompatActivity {
     LandScapeAdapter landScapeAdapter;
     ArrayList<LandScape> recyclerViewDatas;
     RecyclerView recyclerViewLandScape;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home_page);
         recyclerViewDatas = getDataForRecyclerView();
         recyclerViewLandScape = findViewById(R.id.recyclerLand);
 //        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this);
@@ -26,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewLandScape.setAdapter(landScapeAdapter);
     }
     ArrayList<LandScape> getDataForRecyclerView(){
-
         ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
         LandScape landScape1 = new LandScape("tan", "Tanjiro");
         dsDuLieu.add(landScape1);

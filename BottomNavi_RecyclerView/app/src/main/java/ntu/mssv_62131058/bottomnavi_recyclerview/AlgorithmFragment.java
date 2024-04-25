@@ -1,12 +1,15 @@
-package ntu.mssv_62131058.bottomnavi;
+package ntu.mssv_62131058.bottomnavi_recyclerview;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,7 +26,9 @@ public class AlgorithmFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    LandScapeAdapter landScapeAdapter;
+    ArrayList<LandScape> recyclerViewDatas;
+    RecyclerView recyclerViewLandScape;
     public AlgorithmFragment() {
         // Required empty public constructor
     }
@@ -53,6 +58,18 @@ public class AlgorithmFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+    }
+
+    ArrayList<LandScape> getDataForRecyclerView(){
+
+        ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
+        LandScape landScape1 = new LandScape("tan", "Tanjiro");
+        dsDuLieu.add(landScape1);
+        dsDuLieu.add(new LandScape("zen", "Zenitsu"));
+        dsDuLieu.add(new LandScape("ino", "Inosuke"));
+        dsDuLieu.add(new LandScape("mui", "Muichiro"));
+        return dsDuLieu;
     }
 
     @Override

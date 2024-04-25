@@ -1,4 +1,4 @@
-package ntu.mssv_62131058.customnavigation.page;
+package ntu.mssv_62131058.bottomnavi_recyclerview;
 
 public class LandScape {
     public String getLandImageFileName() {
