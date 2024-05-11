@@ -18,14 +18,6 @@ import java.util.ArrayList;
  */
 public class AlgorithmFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
     LandScapeAdapter landScapeAdapter;
     ArrayList<LandScape> recyclerViewDatas;
     RecyclerView recyclerViewLandScape;
@@ -45,8 +37,7 @@ public class AlgorithmFragment extends Fragment {
     public static AlgorithmFragment newInstance(String param1, String param2) {
         AlgorithmFragment fragment = new AlgorithmFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -54,27 +45,23 @@ public class AlgorithmFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
-    }
-
-    ArrayList<LandScape> getDataForRecyclerView(){
-
-        ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
-        LandScape landScape1 = new LandScape("tan", "Tanjiro");
-        dsDuLieu.add(landScape1);
-        dsDuLieu.add(new LandScape("zen", "Zenitsu"));
-        dsDuLieu.add(new LandScape("ino", "Inosuke"));
-        dsDuLieu.add(new LandScape("mui", "Muichiro"));
-        return dsDuLieu;
+        recyclerViewDatas = new ArrayList<LandScape>();
+        recyclerViewDatas.add(new LandScape("tan", "Tanjiro"));
+        recyclerViewDatas.add(new LandScape("zen", "Zenitsu"));
+        recyclerViewDatas.add(new LandScape("ino", "Inosuke"));
+        recyclerViewDatas.add(new LandScape("mui", "Muichiro"));
+        recyclerViewDatas.add(new LandScape("demdaysao", "Đêm đầy sao"));
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_algorithm, container, false);
+        View viewAl = inflater.inflate(R.layout.fragment_algorithm, container, false);
+        recyclerViewLandScape = viewAl.findViewById(R.id.recyclerLand);
+        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(viewAl.getContext());
+        recyclerViewLandScape.setLayoutManager(layoutLinear);
+        landScapeAdapter = new LandScapeAdapter(viewAl.getContext(), recyclerViewDatas);
+        recyclerViewLandScape.setAdapter(landScapeAdapter);
+        return viewAl;
     }
 }
