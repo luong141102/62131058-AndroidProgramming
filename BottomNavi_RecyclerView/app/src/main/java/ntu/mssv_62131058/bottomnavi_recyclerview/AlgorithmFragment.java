@@ -46,11 +46,17 @@ public class AlgorithmFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         recyclerViewDatas = new ArrayList<LandScape>();
-        recyclerViewDatas.add(new LandScape("tan", "Tanjiro"));
-        recyclerViewDatas.add(new LandScape("zen", "Zenitsu"));
-        recyclerViewDatas.add(new LandScape("ino", "Inosuke"));
-        recyclerViewDatas.add(new LandScape("mui", "Muichiro"));
-        recyclerViewDatas.add(new LandScape("demdaysao", "Đêm đầy sao"));
+        recyclerViewDatas.add(new LandScape("starnight", "The Starry Nights"));
+        recyclerViewDatas.add(new LandScape("dog", "Dogs Playing Poker"));
+        recyclerViewDatas.add(new LandScape("lastnight", "The Last Supper"));
+        recyclerViewDatas.add(new LandScape("guernica", "Guernica"));
+        recyclerViewDatas.add(new LandScape("landscape", "Landscape With The Fall Of Icarus"));
+        recyclerViewDatas.add(new LandScape("thekiss", "The Kiss"));
+        recyclerViewDatas.add(new LandScape("anderszorn", "Anders Zorn Our Daily Bread"));
+        recyclerViewDatas.add(new LandScape("magic", "The Adoration of the Magi"));
+        recyclerViewDatas.add(new LandScape("gleaners", "The Gleaners"));
+        recyclerViewDatas.add(new LandScape("nightwave", "The Night Wave"));
+
     }
 
     @Override
