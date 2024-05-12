@@ -3,10 +3,14 @@ package ntu.luong62131058.myapplication;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,15 +18,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Page3Fragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    LandScapeAdapter landScapeAdapter;
+    ArrayList<LandScape> recyclerViewDatas;
+    RecyclerView recyclerViewLandScape;
 
     public Page3Fragment() {
         // Required empty public constructor
@@ -40,8 +38,7 @@ public class Page3Fragment extends Fragment {
     public static Page3Fragment newInstance(String param1, String param2) {
         Page3Fragment fragment = new Page3Fragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -49,16 +46,29 @@ public class Page3Fragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        recyclerViewDatas = new ArrayList<LandScape>();
+        recyclerViewDatas.add(new LandScape("starnight", "The Starry Nights"));
+        recyclerViewDatas.add(new LandScape("dog", "Dogs Playing Poker"));
+        recyclerViewDatas.add(new LandScape("lastnight", "The Last Supper"));
+        recyclerViewDatas.add(new LandScape("guernica", "Guernica"));
+        recyclerViewDatas.add(new LandScape("landscape", "Landscape With The Fall Of Icarus"));
+        recyclerViewDatas.add(new LandScape("thekiss", "The Kiss"));
+        recyclerViewDatas.add(new LandScape("anderszorn", "Anders Zorn Our Daily Bread"));
+        recyclerViewDatas.add(new LandScape("magic", "The Adoration of the Magi"));
+        recyclerViewDatas.add(new LandScape("gleaners", "The Gleaners"));
+        recyclerViewDatas.add(new LandScape("nightwave", "The Night Wave"));
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_page3, container, false);
+        View viewP3 = inflater.inflate(R.layout.fragment_page3, container, false);
+        recyclerViewLandScape = viewP3.findViewById(R.id.recyclerLand);
+        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(viewP3.getContext());
+        recyclerViewLandScape.setLayoutManager(layoutLinear);
+        landScapeAdapter = new LandScapeAdapter(viewP3.getContext(), recyclerViewDatas);
+        recyclerViewLandScape.setAdapter(landScapeAdapter);
+        return viewP3;
     }
 }
